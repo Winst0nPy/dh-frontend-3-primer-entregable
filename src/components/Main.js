@@ -25,8 +25,19 @@ export class Main extends Component {
     });
   };
 
+  setAlert = () => {
+    setTimeout(() => {
+      alert("¡Comienza el juego!");
+    }, 1000);
+  };
+
+  componentDidMount() {
+    this.setAlert();
+  }
+
   handleReset = () => {
     this.setState(INITIAL_STATE);
+    this.setAlert();
   };
 
   getHistory = () => {
